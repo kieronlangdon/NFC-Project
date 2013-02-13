@@ -1,0 +1,6 @@
+Asterisk server source files
+eclipse android source files
+eclipse PC source files
+precompiled file for android
+precompiled readymade file for PC
+software guide.pdf

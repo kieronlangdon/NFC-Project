@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+android:id="@+id/widget28"
+android:orientation="vertical"
+android:background="@drawable/bubbles"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+android:id="@+id/scrllvwNo1"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content">
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"> 
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bubble" />
+
+<EditText
+android:id="@+id/txtData"
+android:layout_width="fill_parent"
+android:layout_height="100px"
+android:textSize="18sp"  />
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:gravity="center">
+    <Button 
+        android:id="@+id/btnTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Call-" 
+        android:width="100dip">
+        
+    </Button>
+    <Button
+        android:id="@+id/btnClearScreen" 
+        android:layout_width="wrap_content" 
+        android:text="-Transfer Call-"
+        android:layout_height="wrap_content"
+        android:width="100dip">
+    </Button>
+</TableRow>
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:gravity="center">
+      <Button
+        android:id="@+id/btnWriteSDFile"
+        android:layout_width="wrap_content" 
+        android:text="-Save Contact-"
+        android:layout_height="wrap_content"
+        android:width="100dip">
+    </Button>
+ </TableRow>
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:gravity="center">
+       <Button
+        android:id="@+id/btnReadSDFile"
+        android:layout_width="wrap_content" 
+        android:text="-Get Contact-"
+        android:layout_height="wrap_content"
+        android:width="100dip">
+    </Button>
+</TableRow>
+</LinearLayout>
+</ScrollView>
+</LinearLayout> 
