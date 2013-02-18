@@ -12,6 +12,8 @@ import com.nfc.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.*;
@@ -141,13 +143,20 @@ public class Nfc extends Activity {
 	@Override /*This next piece of code adds a dialog  box assign to a hardware button the device*/
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 	super.onKeyDown(keyCode, event);
-	        if (keyCode == KeyEvent.KEYCODE_MENU) {
-	        	new AlertDialog.Builder(this)
-	            .setTitle("NFC Integration 2012")
-	            .setMessage("Designed by Kieron Langdon-Press Back to escape")
-	             .show();
-	                return true;
-	        }
+	try {
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+        	new AlertDialog.Builder(this)
+            .setTitle("NFC Integration 2012")
+            .setMessage("Designed by Kieron Langdon-Press Back to escape")
+             .show();
+        	//beep starts here
+        	 Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+             Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+             r.play();
+                return true;
+       
+		}
+    } catch (Exception e) {} 
 			return false;
 	    }
 
